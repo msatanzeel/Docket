@@ -20,7 +20,7 @@ function update()
         
         // console.log(document.getElementById("title").innerHTML);
 
-        if(localStorage.getItem("Json_items")===`` && (tit && desc))
+        if(  (localStorage.getItem("Json_items")===`` || localStorage.getItem("Json_items")==null) && (tit && desc) )
         {
             arr.push([tit,desc]);
             localStorage.setItem('Json_items',JSON.stringify(arr));
