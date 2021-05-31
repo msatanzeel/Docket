@@ -5,8 +5,6 @@ var desc;
 
 // update();
 
-
-
 function update()
 {
         console.log("updating the list...");
@@ -22,7 +20,7 @@ function update()
         
         // console.log(document.getElementById("title").innerHTML);
 
-        if(localStorage.getItem("Json_items")==null && (tit && desc))
+        if(localStorage.getItem("Json_items")===`` && (tit && desc))
         {
             arr.push([tit,desc]);
             localStorage.setItem('Json_items',JSON.stringify(arr));
@@ -35,7 +33,16 @@ function update()
             localStorage.setItem('Json_items',JSON.stringify(arr));  
         }
 
+        // console.log("38");
+        console.log(localStorage.getItem("Json_items"));
+        // console.log("40");
+
+        if(localStorage.getItem("Json_items")===``)
+        return;
+
         JsonStr=localStorage.getItem('Json_items');
+        
+        // console.log(JsonStr);
         arr=JSON.parse(JsonStr);
         localStorage.setItem('Json_items',JSON.stringify(arr)); 
         console.log(arr); 
