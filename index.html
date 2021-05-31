@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <title>Todo List</title>
+
+    <style>
+        .formm{
+            padding: 20px;
+        }
+
+        .box_b{
+            padding: 20px;
+        }
+        #clear{
+            margin-left: 1vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">To-do List</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Items
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Previous work</a></li>
+                            <li><a class="dropdown-item" href="#">Completed works</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Share with</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search Task" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Entering the details of the task -->
+
+    <div class="container my-4">
+        <h2 class="text-center">TODOs List</h2>
+
+        <div class="border">
+            <div class="formm bg-light text-dark">
+                <div class="mb-3">
+                    <label for="title"  class="form-label fs-3 ">Title</label>
+                    <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Enter the title here </div>
+                </div>
+                <div class="mb-3">
+                    <label for="desciption" class="form-label fs-3">Description</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="description"></textarea>
+                        <div  class="form-text">Enter the description here </div> 
+                      </div>
+                </div>
+                <button  type="submit"  id="add" class="fs-4 btn btn-primary" >Add Item</button>
+                <button  type="submit"  id="clear" class="fs-4 btn btn-primary">Clear List</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- The table which shows the content  -->
+
+    <div class="container">
+        <h2>Your Items</h2>
+
+        <div class="box_b border">
+            <table class="table table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">SNo</th>
+                    <th scope="col">Item Title</th>
+                    <th scope="col">Item Description</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+
+
+                <tbody class=" table-hover" id="tbody">
+                  <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td><button type="button" class="btn btm-sm btn-secondary" onclick="deleted(4)">Delete</button></td>
+                  </tr> -->
+                 
+                </tbody>
+              </table>
+        </div>
+
+        
+    </div>
+
+    
+
+
+
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
