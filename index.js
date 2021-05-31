@@ -6,6 +6,7 @@ var desc;
 // update();
 
 
+
 function update()
 {
         console.log("updating the list...");
@@ -13,7 +14,11 @@ function update()
         tit=document.getElementById("title").value;
     
         desc=document.querySelector("#description").value;
+
+        console.log(tit,desc);
+
         var arr=[];
+        
         
         // console.log(document.getElementById("title").innerHTML);
 
@@ -47,20 +52,26 @@ function update()
         
         var tbody=document.getElementById("tbody");
         str="";
-        for(let i=0;i<arr.length;i++)
-        {
-            str+=`
-            <tr>
-                        <th scope="row">${i+1}</th>
-                        <td>${arr[i][0]}</td>
-                        <td>${arr[i][1]}</td>
-                        <td><button type="button" class="btn btm-sm btn-secondary " onclick="deleted(${i})">Delete</button></td>
-                      </tr>`;
+
+            for(let i=0;i<arr.length;i++)
+            {
+                str+=`
+                <tr>
+                <th scope="row">${i+1}</th>
+                <td>${arr[i][0]}</td>
+                <td>${arr[i][1]}</td>
+                <td><button type="button" class="btn btm-sm btn-secondary" onclick=deleted(${i})>Delete</button></td>
+                </tr>`;
             
-        }
-        // console.log(str);
+            }
+            console.log(str);
     
-        tbody.innerHTML=str;
+            tbody.innerHTML=str;
+            // console.log("line 70");
+
+        
+        
+        
         
 }
 
