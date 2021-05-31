@@ -37,7 +37,7 @@ function update()
         console.log(localStorage.getItem("Json_items"));
         // console.log("40");
 
-        if(localStorage.getItem("Json_items")===``)
+        if((localStorage.getItem("Json_items")===`` || localStorage.getItem("Json_items")==null))
         return;
 
         JsonStr=localStorage.getItem('Json_items');
