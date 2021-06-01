@@ -102,6 +102,7 @@ function deleted(ind)
 var clr=document.getElementById('clear');
 
 clr.addEventListener("click",()=>{
+    var r=window.confirm("Are you sure you wonna clear list ? ")
     console.log("deleting the item");
     JsonStr=localStorage.getItem('Json_items');
     arr=JSON.parse(JsonStr);
